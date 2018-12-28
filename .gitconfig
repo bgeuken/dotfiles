@@ -1,0 +1,38 @@
+[user]
+	name = Björn Geuken
+  email = bgeuken@suse.de
+
+[color]
+  status = auto
+#  diff   = auto
+  branch = auto
+  ui     = auto
+
+[alias]
+  co = checkout
+  b = checkout -b
+  st = status
+  ci = commit --verbose
+  commit = commit --verbose
+  cp = cherry-pick
+  fp = push --force-with-lease
+  fixup = commit --fixup
+  rb = rebase --interactive
+  rs = rebase --interactive --autosquash
+  c = rebase --continue
+  lc = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+
+[merge]
+  summary = true
+
+[branch "master"]
+  rebase = true
+
+[push]
+	default = current
+  # default = tracking
+[core]
+  compression = 0
+
+[commit]
+  template = ~/.gitmessage
