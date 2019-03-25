@@ -55,6 +55,7 @@ set t_ut=
 " search while chars get entered
 set incsearch
 set ignorecase
+set smartcase
 set hlsearch
 
 set expandtab
